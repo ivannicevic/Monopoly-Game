@@ -108,8 +108,6 @@ public class BigMoney implements Bot {
 	}
 
 	private String mortgageProperty() {
-		System.out.println(player.getProperties()); // DEBUG
-
 		// Case 1: Check if there is any utility
 		for (int i = 0; i < player.getProperties().size() - 1; i++) {
 			String shortName = player.getProperties().get(i).getShortName();
@@ -172,7 +170,6 @@ public class BigMoney implements Bot {
 				}
 			}
 			if (player.getBalance() >= redeemPrice && redeemPrice != 0) {
-				System.out.println("Debug: pric" + redeemPrice + " nam " + redeemShortName + ".");
 				return redeemShortName;
 			} else {
 				return null;
